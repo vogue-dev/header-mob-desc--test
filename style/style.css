@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #e6e6e6;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header__content {
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header__content .header__content--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header__content .header__content--right div {
+  margin: 8px;
+}
+
+header .header__content .header__content--right div:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+header .header__content .header__content--right div:hover .login--text {
+  color: black;
+}
+
+header .header__content .header__content--right div:hover > svg {
+  color: black;
+}
+
+header .header__content .header__content--right div svg {
+  color: #553d8d;
+  width: 16px;
+  height: 16px;
+}
+
+header .header__content .header__content--right .home,
+header .header__content .header__content--right .edit,
+header .header__content .header__content--right .notification {
+  background-color: #e6e6e6;
+}
+
+header .header__content .header__content--right .home:hover,
+header .header__content .header__content--right .edit:hover,
+header .header__content .header__content--right .notification:hover {
+  cursor: pointer;
+  background-color: gray;
+}
+
+header .header__content .header__content--right .login {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header__content .header__content--right .login svg {
+  display: block;
+}
+
+header .header__content .header__content--right .login--text {
+  display: none;
+  margin-left: 10px;
+  color: #553d8d;
+}
+
+header .header__content .header__content--right .login img {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .header__content {
+    height: 50px;
+    padding: 0 10px;
+  }
+  .header__content .logo {
+    width: 50px;
+  }
+  .header__content .header__content--right .home,
+  .header__content .header__content--right .edit,
+  .header__content .header__content--right .notification {
+    display: none;
+  }
+  .header__content .header__content--right .login {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__content .header__content--right .login svg,
+  .header__content .header__content--right .login .login--text {
+    display: none;
+  }
+  .header__content .header__content--right .login img {
+    display: block;
+  }
+  .header__content .header__content--right.logged .login svg,
+  .header__content .header__content--right.logged .login .login--text {
+    display: none;
+  }
+  .header__content .header__content--right.logged .login img {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .header__content {
+    height: 70px;
+    padding: 0 30px;
+  }
+  .header__content .logo {
+    width: 70px;
+  }
+  .header__content .header__content--right .edit,
+  .header__content .header__content--right .notification {
+    display: none;
+  }
+  .header__content .header__content--right .home {
+    display: block;
+    height: 36px;
+    width: 36px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__content .header__content--right .login {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__content .header__content--right .login svg {
+    display: none;
+  }
+  .header__content .header__content--right .login .login--text,
+  .header__content .header__content--right .login img {
+    display: block;
+  }
+  .header__content .header__content--right.logged .home,
+  .header__content .header__content--right.logged .edit,
+  .header__content .header__content--right.logged .notification {
+    height: 36px;
+    width: 36px;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__content .header__content--right.logged .edit {
+    background-color: #02d99c;
+  }
+  .header__content .header__content--right.logged .edit svg {
+    color: white;
+  }
+  .header__content .header__content--right.logged .notification {
+    position: relative;
+  }
+  .header__content .header__content--right.logged .notification span {
+    position: absolute;
+    background-color: red;
+    color: white;
+    top: -4px;
+    right: -4px;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    font-size: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__content .header__content--right.logged .login {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__content .header__content--right.logged .login svg,
+  .header__content .header__content--right.logged .login .login--text {
+    display: none;
+  }
+  .header__content .header__content--right.logged .login img {
+    display: block;
+    width: 36px;
+    height: 36px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
